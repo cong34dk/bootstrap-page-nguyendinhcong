@@ -1,8 +1,14 @@
-.custom-container{
+.custom-container {
     display: flex;
-    height: 800px; 
+    flex-grow: 1; /* Đảm bảo chiều cao tổng thể được điều chỉnh bởi nội dung */
+    height: auto; 
     box-sizing: border-box;
 }
+.no-horizontal-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 
 /* begin header */
 .header {
@@ -70,7 +76,7 @@ body {
 .left-sidebar {
     background-color: #2a2f33;
     padding: 0 !important;
-    height: 100%;
+    height: auto; /* Chỉnh lại thành auto để điều chỉnh theo nội dung */
     display: flex;
     flex-direction: column;
 }
@@ -152,11 +158,11 @@ body {
 /* Chiếm hết chiều cao còn lại giữa form-search và footer */
 .main-body_content {
     flex: 1; /* Chiếm toàn bộ không gian còn lại giữa form-search và footer */
-    padding: 80px;
+    padding: 30px;
     box-sizing: border-box;
-    overflow-y: auto;
     box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    height: auto;
 }
 
 /* end main-body_content */
@@ -175,4 +181,88 @@ body {
 /* end footer */
 
 
+/* Nút "Back to Top" */
+.back-to-top {
+    display: none; /* Ẩn nút theo mặc định */
+    position: fixed;
+    bottom: 40px; /* Vị trí từ dưới cùng của trang */
+    right: 40px; /* Vị trí từ bên phải của trang */
+    background-color: #044863; /* Màu nền của nút */
+    color: #fff; /* Màu chữ */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999; /* Đảm bảo nút nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #fb474a; /* Màu nền khi hover */
+}
+
+/* begin category  */
+.category{
+    padding: 1rem;
+    margin:  0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng nhẹ */
+    position: relative; /* Để dễ dàng đặt icon trên ảnh */
+}
+
+/* Định dạng cho tiêu đề card-title */
+.card-title {
+    font-size: 0.9rem; /* Kích thước chữ nhỏ hơn */
+    font-weight: bold; /* Chữ đậm */
+    color: #000; /* Màu chữ đen */
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+}
+
+/* Định dạng cho mô tả category-description */
+.category-description {
+    font-size: 0.8rem; /* Kích thước chữ nhỏ hơn */
+    color: #666; /* Màu chữ đen nhạt */
+}
+
+/* Định dạng cho thời gian category-publish_time */
+.category-publish {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa icon và chữ */
+}
+
+.category-publish_time {
+    font-size: 0.75rem; /* Kích thước chữ nhỏ hơn */
+    white-space: nowrap; /* Đảm bảo không xuống dòng */
+    color: #666; /* Màu chữ xám nhạt hơn */
+    margin: 0; /* Xóa bỏ margin mặc định của phần tử p */
+}
+
+/* Icon mắt và số lượng xem */
+.view-icon {
+    position: absolute;
+    bottom: -10px; /* Vị trí từ dưới ảnh lên */
+    right: -10px; /* Vị trí từ bên phải ảnh qua */
+    background-color: #007bff; /* Màu nền xanh */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 5px; /* Bo góc */
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.view-icon i {
+    margin-right: 5px; /* Khoảng cách giữa icon và số */
+}
+.category-publish_brand img {
+    width: 20px; /* Kích thước nhỏ hơn cho logo */
+    height: auto; /* Duy trì tỉ lệ khung hình */
+}
 
