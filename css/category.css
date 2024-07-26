@@ -346,30 +346,3 @@ body {
     display: flex;
     align-items: center;
 }
-
-
-.title-section,
-.btn-viewall {
-    display: inline-block;
-}
-
-.title-section {
-    margin-right: 15px; 
-}
-
-.btn-viewall {
-    background-color: #479cf6; 
-    color: #fff; /* Màu chữ trắng */
-    border: none; /* Xóa đường viền mặc định */
-    padding: 10px 15px; /* Padding cho nút */
-    border-radius: 5px; /* Bo góc nhẹ cho nút */
-    font-size: 1rem; /* Kích thước font chữ */
-}
-
-.btn-viewall i {
-    background-color: #fff; /* Màu nền trắng cho icon */
-    color: #007bff; /* Màu chữ xanh dương cho icon */
-    border-radius: 50%; /* Bo tròn cho icon */
-    padding: 3px;
-    margin-left: 10px; /* Khoảng cách giữa chữ và icon */
-}
