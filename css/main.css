@@ -8,6 +8,13 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+.title-section h3 {
+    display: inline-block; /* Đảm bảo border chỉ áp dụng cho văn bản */
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+    padding-bottom: 5px; /* Khoảng cách giữa chữ và gạch chân */
+    border-bottom: 3px solid red; /* Gạch chân màu đỏ */
+    margin-bottom: 10px;
+}
 
 
 /* begin header */
@@ -165,12 +172,13 @@ body {
     height: auto;
 }
 
+
 /* end main-body_content */
 
 /* begin footer */
 .footer {
     flex-shrink: 0;
-    height: 60px;
+    height: 100px;
     color: #000;
     background-color: #fff;
     display: flex;
@@ -208,9 +216,7 @@ body {
 
 /* begin category  */
 .category{
-    padding: 1rem;
-    margin:  0 auto;
-    margin-bottom: 20px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng nhẹ */
     position: relative; /* Để dễ dàng đặt icon trên ảnh */
 }
@@ -245,7 +251,7 @@ body {
 }
 
 /* Icon mắt và số lượng xem */
-.view-icon {
+.category .view-icon {
     position: absolute;
     bottom: -10px; /* Vị trí từ dưới ảnh lên */
     right: -10px; /* Vị trí từ bên phải ảnh qua */
@@ -265,4 +271,33 @@ body {
     width: 20px; /* Kích thước nhỏ hơn cho logo */
     height: auto; /* Duy trì tỉ lệ khung hình */
 }
+
+/* End category */
+
+/* begin right section */
+
+.right-section .view-icon{
+    position: absolute;
+    bottom: 67px; /* Vị trí từ dưới ảnh lên */
+    right: -5px; /* Vị trí từ bên phải ảnh qua */
+    background-color: #007bff; /* Màu nền xanh */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 5px; /* Bo góc */
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+.right-section .right-section-des {
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Nền mờ đen */
+
+}
+
 
